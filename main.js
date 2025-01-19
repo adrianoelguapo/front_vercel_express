@@ -1,7 +1,7 @@
 $(function() {
     // Mostrar todos los usuarios por defecto
     $.ajax({
-        url: "http://localhost:5000/api/users",
+        url: "https://back-express-vercel.vercel.app/api/users",
         type: "GET",
         success: function(result){
             $(".content").empty();
@@ -25,7 +25,7 @@ $(function() {
     // Mostrar todos los usuarios
     $("#showall").click(() => {
         $.ajax({
-            url: "http://localhost:5000/api/users",
+            url: "https://back-express-vercel.vercel.app/api/users",
             type: "GET",
             success: function(result){
                 $(".content").empty();
@@ -53,7 +53,7 @@ $(function() {
         let userFound;
 
         $.ajax({
-            url: `http://localhost:5000/api/users/${userId}`,
+            url: `https://back-express-vercel.vercel.app/api/users/${userId}`,
             type: "GET",
             success: function(result){
                 userFound = result
@@ -93,7 +93,7 @@ $(function() {
         if (name && surname && phone) {
             // Enviar los datos al servidor
             $.ajax({
-                url: "http://localhost:5000/api/users",
+                url: "https://back-express-vercel.vercel.app/api/users",
                 type: "POST",
                 contentType: "application/json",
                 data: JSON.stringify({ name: name, apellido: surname, tlf: phone }),
